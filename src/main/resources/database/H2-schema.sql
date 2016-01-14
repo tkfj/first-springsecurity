@@ -5,4 +5,3 @@ CREATE TABLE account(
     last_name varchar(128),
     constraint pk_tbl_account primary key (username)
 );
-

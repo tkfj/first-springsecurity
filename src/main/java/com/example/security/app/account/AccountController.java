@@ -13,12 +13,9 @@ import com.example.security.domain.service.userdetails.SampleUserDetails;
 public class AccountController {
 
     @RequestMapping
-    public String view(
-            @AuthenticationPrincipal SampleUserDetails userDetails,
-            Model model) {
+    public String view(@AuthenticationPrincipal SampleUserDetails userDetails, Model model) {
         Account account = userDetails.getAccount();
         model.addAttribute(account);
         return "account/view";
     }
 }
-
