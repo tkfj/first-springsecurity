@@ -11,7 +11,8 @@ public class SampleUserDetails extends User {
     private final Account account;
 
     public SampleUserDetails(Account account) {
-        super(account.getUsername(), account.getPassword(), AuthorityUtils.createAuthorityList("ROLE_USER"));
+        super(account.getUsername(), account.getPassword(),
+                AuthorityUtils.createAuthorityList("ROLE_USER"));
         this.account = account;
     }
 

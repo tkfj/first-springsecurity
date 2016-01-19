@@ -33,7 +33,7 @@
     <!-- Remember Me -->
     <!-- cookie 有効期間(秒) -->
     <sec:remember-me key="terasoluna-tourreservation-km/ylnHv"
-      remember-me-parameter="remember-me" token-validity-seconds="#{30 * 24 * 60 * 60}" />
+      token-validity-seconds="#{30 * 24 * 60 * 60}" />
 
   </sec:http>
 

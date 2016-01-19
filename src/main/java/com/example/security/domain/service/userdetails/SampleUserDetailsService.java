@@ -19,7 +19,8 @@ public class SampleUserDetailsService implements UserDetailsService {
 
     @Transactional(readOnly = true)
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String username)
+            throws UsernameNotFoundException {
         try {
             Account account = accountSharedService.findOne(username);
             return new SampleUserDetails(account);
