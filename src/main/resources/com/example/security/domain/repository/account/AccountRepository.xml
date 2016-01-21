@@ -16,10 +16,11 @@
       username,
       password,
       first_name,
-      last_name
+      last_name,
+      company_id
     FROM
       account
     WHERE
-      username = #{username}
+      username = #{username} and company_id = #{companyId}
   </select>
 </mapper>

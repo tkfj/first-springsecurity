@@ -3,7 +3,8 @@ package com.example.security.domain.model;
 import java.io.Serializable;
 
 public class Account implements Serializable {
-    private static final long serialVersionUID = 1L;
+
+    private static final long serialVersionUID = -5785674182270126494L;
 
     private String username;
 
@@ -12,6 +13,8 @@ public class Account implements Serializable {
     private String firstName;
 
     private String lastName;
+
+    private String companyId;
 
     public String getUsername() {
         return username;
@@ -45,9 +48,17 @@ public class Account implements Serializable {
         this.lastName = lastName;
     }
 
+    public String getCompanyId() {
+        return companyId;
+    }
+
+    public void setCompanyId(String companyId) {
+        this.companyId = companyId;
+    }
+
     @Override
     public String toString() {
         return "Account [username=" + username + ", password=" + password + ", firstName="
-                + firstName + ", lastName=" + lastName + "]";
+                + firstName + ", lastName=" + lastName + ", companyId" + companyId + "]";
     }
 }

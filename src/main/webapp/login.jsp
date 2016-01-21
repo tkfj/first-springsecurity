@@ -34,6 +34,14 @@
         </tr>
         <tr>
           <td>
+            <label for="j_password">Company Id:</label>
+          </td>
+          <td>
+            <input type="text" id="companyid" name="companyid" value="demo" />(demo)
+          </td>
+        </tr>
+        <tr>
+          <td>
             <label for="_spring_security_remember_me">Remember Me :</label>
           </td>
           <td>

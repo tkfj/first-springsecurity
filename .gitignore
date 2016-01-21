@@ -8,6 +8,7 @@
 .project
 .classpath
 .settings
+.tern-project
 
 # OS
 Thumbs.db
