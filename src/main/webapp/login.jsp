@@ -37,7 +37,11 @@
             <label for="j_password">Company Id:</label>
           </td>
           <td>
-            <input type="text" id="companyid" name="companyid" value="demo" />(demo)
+            <select id="companyid" name="companyid">
+              <option value="company1">company1</option>
+              <option value="company2">company2</option>
+              <option value="company3">company3</option>
+            </select>
           </td>
         </tr>
         <tr>

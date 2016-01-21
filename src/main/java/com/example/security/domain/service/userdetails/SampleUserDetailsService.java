@@ -22,7 +22,7 @@ public class SampleUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username)
             throws UsernameNotFoundException {
         try {
-            Account account = accountSharedService.findOne(username);
+            Account account = accountSharedService.findOne(username, "company1");
             return new SampleUserDetails(account);
         } catch (ResourceNotFoundException e) {
             throw new UsernameNotFoundException("user not found", e);
