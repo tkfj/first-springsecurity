@@ -45,17 +45,6 @@
           </td>
         </tr>
         <tr>
-          <td>
-            <label for="_spring_security_remember_me">Remember Me :</label>
-          </td>
-          <td>
-            <input name="_spring_security_remember_me"
-                   id="_spring_security_remember_me"
-                   type="checkbox"
-                   checked="checked">
-          </td>
-        </tr>
-        <tr>
           <td>&nbsp;</td>
           <td>
             <input name="submit" type="submit" value="Login" />

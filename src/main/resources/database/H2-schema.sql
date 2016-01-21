@@ -4,5 +4,5 @@ CREATE TABLE account(
     first_name varchar(128),
     last_name varchar(128),
     company_id varchar(128),
-    constraint pk_tbl_account primary key (username)
+    constraint pk_tbl_account primary key (username, company_id)
 );

@@ -36,11 +36,6 @@
     <sec:intercept-url pattern="/login.jsp" access="permitAll" />
     <sec:intercept-url pattern="/**" access="isAuthenticated()" />
 
-    <!-- Remember Me -->
-    <!-- cookie 有効期間(秒) -->
-    <sec:remember-me key="terasoluna-tourreservation-km/ylnHv"
-      token-validity-seconds="#{30 * 24 * 60 * 60}" />
-
   </sec:http>
 
   <bean id="loginUrlAuthenticationEntryPoint"
