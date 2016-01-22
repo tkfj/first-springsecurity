@@ -1,5 +1,7 @@
 package com.example.security.domain.service.userdetails;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.springframework.security.core.userdetails.UserDetails;
@@ -22,8 +24,11 @@ public class SampleUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username)
             throws UsernameNotFoundException {
         try {
-            Account account = accountSharedService.findOne(username, "company1");
-            return new SampleUserDetails(account);
+            List<Account> account = accountSharedService.findOne(username);
+            
+        
+            
+            return new TemporarySampleUserDetails(account);
         } catch (ResourceNotFoundException e) {
             throw new UsernameNotFoundException("user not found", e);
         }

@@ -1,5 +1,7 @@
 package com.example.security.domain.service.account;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
@@ -14,17 +16,15 @@ public class AccountSharedServiceImpl implements AccountSharedService {
     @Inject
     AccountRepository accountRepository;
 
-    @Transactional(readOnly = true)
     @Override
-    public Account findOne(String username, String companyId) {
-        
+    @Transactional(readOnly = true)
+    public List<Account> findOne(String username) {
         Account param = new Account();
         param.setUsername(username);
-        param.setCompanyId(companyId);
-        Account account = accountRepository.findOne(param);
-        if (account == null) {
+        List<Account> account = accountRepository.findOne(param);
+        if (account.isEmpty()) {
             throw new ResourceNotFoundException(
-                    "The given account is not found! username=" + username);
+                    "The given account is not found! username=" + param.getUsername());
         }
         return account;
     }
